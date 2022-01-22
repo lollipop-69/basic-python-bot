@@ -13,4 +13,4 @@ async def ping(ctx):
     embed = Embed(title = "Latency", description = f"{round(bot.latency*1000)}",color = Color.random())
     await ctx.send(embed=embed)
     
-bot.run("TOKEN")
+bot.run("TOKEN") # running the bot using the application token of your bot
