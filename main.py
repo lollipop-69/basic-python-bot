@@ -90,7 +90,7 @@ async def prefix(ctx,prefix):
 
         json.dump(prefixes,f,indent=4)
 
-    jhg=discord.Embed(description=f'**Prefix of the bot for the server has been changed to {prefix}**',color=discord.Color.from_rgb(000,000,205))
+    jhg=discord.Embed(description=f'**Prefix of the bot for the server has been changed to {prefix}**',color=Color.from_rgb(000,000,205))
 
     await ctx.send(embed=jhg)   
     
