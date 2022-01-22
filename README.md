@@ -1,1 +1,1 @@
-# install nextcord.py in terminal using pip install discord.py
+# install nextcord.py in terminal using pip install nextcord.py
