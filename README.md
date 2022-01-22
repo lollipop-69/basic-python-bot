@@ -1,1 +1,1 @@
-# install nextcord.py in terminal using pip install nextcord.py
+# Create a Discord Bot using the library Nextcord on Python
