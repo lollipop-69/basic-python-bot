@@ -2,7 +2,29 @@ import nextcord # importing nextcord Library to run the bot
 from nextcord import Embed, Color # importing Embed and Color
 from nextcord.ext import commands # importing the main component 
 
-bot = commands.Bot(command_prefix = "?",case_insensitive = True, strip_after_prefix = True) # creating a bot variable to set a prefix for the bot
+
+def get_prefix(bot,message):
+
+    if message.guild:
+
+    
+
+        with open('./databases/prefixes.json','r') as f:
+
+            prefixes=json.load(f)
+
+    
+
+        return commands.when_mentioned_or(prefixes[str(message.guild.id)])(bot,message)
+
+    if not message.guild:
+
+        return "?"
+
+
+
+
+bot = commands.Bot(command_prefix = get_prefix ,case_insensitive = True, strip_after_prefix = True) # creating a bot variable to set a prefix for the bot
 
 @bot.event # event to be triggered when the bot is ready
 async def on ready():
